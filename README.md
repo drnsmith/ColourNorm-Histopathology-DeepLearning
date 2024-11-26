@@ -21,31 +21,27 @@ Medical AI workflows often rely on pre-processing steps like CN to standardise h
 The project uses the BreakHis dataset, a large collection of histopathological images of benign and malignant breast tumors at different magnifications. 
 
 #### Getting Started
- - Prerequisites
-Install the required Python libraries using pip:
+##### Prerequisites
+ - Install the required Python libraries using pip:
 
 ```bash
-
 pip install tensorflow numpy pandas scikit-learn opencv-python matplotlib
 ```
-How to Run the Notebook
-
-Clone the repository:
+ - Clone the repository:
 ```bash
 
 git clone https://github.com/drnsmith/ColourNorm-Histopathology-DeepLearning.git
 ```
-Download the BreakHis dataset from the official site and place it in the `data/breakhis/` directory.
+ - Download the BreakHis dataset from the official site and place it in the `data/breakhis/` directory.
 
-Open the Jupyter Notebook:
+ - Open the Jupyter Notebook:
 ```bash
-
 jupyter notebook colornorm.ipynb
 ```
-Run the notebook cells step-by-step to:
- - Load and preprocess the dataset.
- - Apply CN and DA.
- - Train and evaluate the DenseNet201 model.
+ - Run the notebook cells step-by-step to:
+    - Load and preprocess the dataset.
+    - Apply CN and DA.
+    - Train and evaluate the DenseNet201 model.
 
 #### Results
 DA alone achieved the highest performance across all metrics, outperforming traditional CN techniques. Key metrics:

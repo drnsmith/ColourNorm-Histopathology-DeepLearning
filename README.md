@@ -1,65 +1,109 @@
-### Evaluating the necessity of colour normalisation in Deep Learning (DL)-based histopathological image classification
-The project evaluates multiple colour normalisation (CN) techniques and compares them against data augmentation (DA) to determine their impact on the performance of a DenseNet201 model, using the publicly available **BreakHis** dataset for breast cancer histopathology images.
+# **Evaluating the Necessity of Colour Normalisation in Deep Learning-Based Histopathological Image Classification**
 
-#### About the Project
-Medical AI workflows often rely on pre-processing steps like CN to standardise histopathological images. However, this study challenges the assumption that CN is always necessary, showing that robust DA alone can outperform traditional CN techniques. This finding has significant implications for simplifying AI workflows and making them more accessible and scalable in real-world healthcare applications.
+## **Project Overview**
+This project investigates the impact of various **Colour Normalisation (CN)** techniques on the performance of deep learning models in histopathological image classification. By comparing these techniques against robust **Data Augmentation (DA)** strategies, the study aims to determine whether CN is essential for achieving high classification accuracy. The publicly available **BreakHis** dataset, comprising breast cancer histopathology images, serves as the basis for evaluation.
 
-#### Key Features
- - Implementation of four CN techniques:
-**Channel-Based Normalisation (CBN)**
-**Color Deconvolution (CD)**
-**CBN + CLAHE**
-**CD + CLAHE**
+---
 
- - DA techniques including rotation, flipping, zooming, and more.
- - DenseNet201 model for binary classification of breast cancer histopathology images.
+## **Motivation**
+In medical AI workflows, pre-processing steps like CN are commonly employed to standardise histopathological images, addressing staining variability and enhancing model performance. However, this study challenges the necessity of CN by exploring whether advanced DA techniques can achieve comparable or superior results, thereby simplifying the pre-processing pipeline and improving scalability in real-world healthcare applications.
 
- - Evaluation metrics:
-**Accuracy**, **Sensitivity**, **Specificity**, **ROC-AUC**, and **F1 Score**.
+---
 
-#### Dataset
-The project uses the BreakHis dataset, a large collection of histopathological images of benign and malignant breast tumors at different magnifications. 
+## **Key Features**
+- **Implementation of Four CN Techniques**:
+  - *Channel-Based Normalisation (CBN)*
+  - *Color Deconvolution (CD)*
+  - *CBN combined with Contrast Limited Adaptive Histogram Equalization (CLAHE)*
+  - *CD combined with CLAHE*
 
-#### Getting Started
-##### Prerequisites
- - Install the required Python libraries using pip:
+- **Data Augmentation Strategies**:
+  - Rotation
+  - Flipping
+  - Zooming
+  - Other transformations to enhance model robustness
 
+- **Deep Learning Model**:
+  - Utilisation of a pre-trained **DenseNet201** model for binary classification of breast cancer histopathology images
+
+- **Evaluation Metrics**:
+  - Accuracy
+  - Sensitivity
+  - Specificity
+  - ROC-AUC
+  - F1 Score
+
+---
+
+## **Dataset**
+The project utilises the **BreakHis** dataset, a comprehensive collection of histopathological images of benign and malignant breast tumors at various magnifications. The dataset is publicly accessible and widely used for research in medical image analysis.
+
+---
+
+## **Getting Started**
+
+### **Prerequisites**
+- **Python Libraries**:
+  - TensorFlow
+  - NumPy
+  - Pandas
+  - scikit-learn
+  - OpenCV
+  - Matplotlib
+
+Install the required libraries using pip:
 ```bash
 pip install tensorflow numpy pandas scikit-learn opencv-python matplotlib
 ```
- - Clone the repository:
-```bash
 
-git clone https://github.com/drnsmith/ColourNorm-Histopathology-DeepLearning.git
-```
- - Download the BreakHis dataset from the official site and place it in the `data/breakhis/` directory.
+### **Installation**
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/drnsmith/ColourNorm-Histopathology-DeepLearning.git
+   cd ColourNorm-Histopathology-DeepLearning
+   ```
 
- - Open the Jupyter Notebook:
-```bash
-jupyter notebook colornorm.ipynb
-```
- - Run the notebook cells step-by-step to:
-    - Load and preprocess the dataset.
-    - Apply CN and DA.
-    - Train and evaluate the DenseNet201 model.
+2. **Download the BreakHis Dataset**:
+   - Obtain the dataset from the official [BreakHis website](https://web.inf.ufpr.br/vri/breast-cancer-database) and place it in the `data/breakhis/` directory.
 
-#### Results
-DA alone achieved the highest performance across all metrics, outperforming traditional CN techniques. Key metrics:
- - Accuracy: 91.8%
- - Sensitivity: 90.2%
- - Specificity: 92.5%
+3. **Open the Jupyter Notebook**:
+   ```bash
+   jupyter notebook colornorm.ipynb
+   ```
 
-The findings suggest that modern DL architectures, coupled with robust DA, can effectively handle staining variability without the need for CN.
+4. **Run the Notebook**:
+   - Execute the cells sequentially to:
+     - Load and preprocess the dataset
+     - Apply CN and DA techniques
+     - Train and evaluate the DenseNet201 model
 
-### Contributing
-Contributions are welcome! If you have ideas for improving the project or extending its scope, feel free to:
+---
 
-#### Fork the repository
- - Create a pull request
- - Open an issue for discussion
+## **Results**
+The study reveals that robust DA alone achieves the highest performance across all evaluation metrics, surpassing traditional CN techniques. Key metrics include:
+- **Accuracy**: 91.8%
+- **Sensitivity**: 90.2%
+- **Specificity**: 92.5%
 
-### License
-This project is licensed under the MIT License. See the LICENSE file for details.
+These findings suggest that modern deep learning architectures, when combined with effective DA, can handle staining variability without the need for explicit CN, thereby streamlining AI workflows in histopathological image analysis.
 
-### Acknowledgments
+---
+
+## **Contributing**
+Contributions are welcome! If you have ideas for improving the project or extending its scope, please:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add YourFeature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a pull request
+
+---
+
+## **License**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## **Acknowledgments**
 Special thanks to the creators of the BreakHis dataset and the researchers whose methodologies inspired this project.
+

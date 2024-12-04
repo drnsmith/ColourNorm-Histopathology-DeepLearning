@@ -1,11 +1,11 @@
-# Evaluating the Necessity of Colour Normalisation in Deep Learning-Based Histopathological Image Classification
+### Colour Normalisation in Deep Learning: Enhancing Histopathology Image Classification
 
-## Project Overview
+##### Overview
 This project investigates the impact of various **Colour Normalisation (CN)** techniques on the performance of deep learning models in histopathological image classification. By comparing these techniques against robust **Data Augmentation (DA)** strategies, the study aims to determine whether CN is essential for achieving high classification accuracy. The publicly available **BreakHis** dataset, comprising breast cancer histopathology images, serves as the basis for evaluation.
 
 ---
 
-## **Motivation**
+#### **Motivation**
 In medical AI workflows, pre-processing steps like CN are commonly employed to standardise histopathological images, addressing staining variability and enhancing model performance. However, this study challenges the necessity of CN by exploring whether advanced DA techniques can achieve comparable or superior results, thereby simplifying the pre-processing pipeline and improving scalability in real-world healthcare applications.
 
 ---

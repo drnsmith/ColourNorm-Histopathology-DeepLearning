@@ -89,6 +89,14 @@ These findings suggest that modern deep learning architectures, when combined wi
 
 ---
 
+### Productisation  
+This research on **Colour Normalisation (CN) in deep learning for histopathology** can be transformed into a **scalable AI-powered diagnostic assistant** for **pathologists and medical researchers**. By integrating CN techniques into **automated histopathology pipelines**, the system can improve **model robustness and diagnostic consistency**. A potential application includes a **cloud-based API** that processes medical images, applies optimal pre-processing, and returns **enhanced, standardised images for AI model training**.
+
+### Monetisation  
+The project can be monetised through **API-based licensing**, allowing **hospitals, research labs, and biotech firms** to integrate **AI-enhanced histopathology pre-processing** into their workflows. Additionally, a **subscription-based SaaS model** could offer **cloud-based image normalisation and augmentation** for AI researchers. Partnerships with **medical imaging companies** could enable **enterprise licensing**, incorporating CN techniques into **FDA-compliant diagnostic tools** for improved pathology AI applications.
+
+
+---
 ## **Contributing**
 Contributions are welcome! If you have ideas for improving the project or extending its scope, please:
 1. Fork the repository
